@@ -1,0 +1,18 @@
+<ul>
+	<li id="item-{{item.id}}" 
+  class="list-item"
+  [class.red]="el == ('item-'+item.id)" *ngFor="let item of mapping "
+  [class.mapped]="mappedObj['item-'+item.id]"
+  [class.mapped-and-selected]="(el == 'item-'+item.id && selectionWasMapped(el)) || (selectionWasMapped2(el2) && this.savedMappings[this.mappedIndex].mapping == 'item-'+item.id)"
+  (click)="doSomething($event.currentTarget)"
+  >item</li>
+</ul>
+<ul>
+	<li id="alt-item-{{item.id}}" 
+  class="list-item"
+  [class.red]="el2 == ('alt-item-'+item.id)" *ngFor="let item of mapping2 "
+  (click)="doSomething2($event.currentTarget)"
+  [class.mapped]="mappedObj2['alt-item-'+item.id]"
+  [class.mapped-and-selected]="(el2 == 'alt-item-'+item.id && selectionWasMapped2(el2)) || (selectionWasMapped(el) && this.savedMappings[this.mappedIndex].mapping2 == 'alt-item-'+item.id)"
+  >item</li>
+</ul>
