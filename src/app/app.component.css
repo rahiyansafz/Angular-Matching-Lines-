@@ -11,11 +11,14 @@ p {
 }
 
 .mapped-and-selected {
-  background:purple;
+  background: purple;
 }
 
 ul {
   display: inline-block;
   width: 50px;
   margin-right: 100px;
+}
+ul li {
+  cursor: pointer;
 }
